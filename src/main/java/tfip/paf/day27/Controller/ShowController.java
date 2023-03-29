@@ -27,7 +27,7 @@ public class ShowController {
         Optional<Show> opt = showSvc.getShow(showName);
         if (opt.isEmpty()) {
 			model.addAttribute("message", "No TV show with the name '%s'".formatted(showName));
-			return "notfound";
+			return "notFound";
 		}
         model.addAttribute("tvshow",opt.get());
         return "commentPage";
